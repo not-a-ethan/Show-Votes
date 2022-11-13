@@ -30,6 +30,7 @@
     // Another spacer
     function showVotes() {
       upvotes.item(i).innerHTML = "+" + upvotesNum + "/-" + downvotesNum
+      upvotes.item(i).style.cursor = "default"
     }
     upvotes.item(i).addEventListener("click", showVotes)
     upvotes.item(i).style.cursor = "pointer"
