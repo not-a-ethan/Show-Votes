@@ -32,5 +32,6 @@
       upvotes.item(i).innerHTML = "+" + upvotesNum + "/-" + downvotesNum
     }
     upvotes.item(i).addEventListener("click", showVotes)
+    upvotes.item(i).style.cursor = "pointer"
   }
 })();
