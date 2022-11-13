@@ -29,8 +29,13 @@
     downvotes.item(i).innerHTML = ""
     // Another spacer
     function showVotes() {
-      upvotes.item(i).innerHTML = "+" + upvotesNum + "/-" + downvotesNum
-      upvotes.item(i).style.cursor = "default"
+      if (upvotes.item(i).innerHTML[0] == '+') {
+        upvotes.item(i).innerHTML = total
+        upvotes.item(i).style.cursor = "default"
+      } else {
+        upvotes.item(i).innerHTML = "+" + upvotesNum + "/-" + downvotesNum
+        upvotes.item(i).style.cursor = "pointer"
+      }
     }
     upvotes.item(i).addEventListener("click", showVotes)
     upvotes.item(i).style.cursor = "pointer"
