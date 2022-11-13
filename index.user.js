@@ -6,6 +6,8 @@
 // @author       Ethan (https://github.com/not-a-ethan)
 // @match        *.codidact.com/*
 // @match        *.codidact.org/*
+// @downloadURL  https://github.com/not-a-ethan/Show-Votes/raw/main/index.user.js
+// @updateURL    https://github.com/not-a-ethan/Show-Votes/raw/main/index.user.js
 // ==/UserScript==
 
 (function() {
