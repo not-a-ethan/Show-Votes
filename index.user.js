@@ -7,7 +7,7 @@
 // @match        *.codidact.com/*
 // @match        *.codidact.org/*
 // @downloadURL  https://github.com/not-a-ethan/Show-Votes/raw/main/index.user.js
-// @updateURL    https://github.com/not-a-ethan/Show-Votes/raw/main/index.user.js
+// @updateURL    https://github.com/not-a-ethan/Show-Votes/blob/main/index.user.js
 // ==/UserScript==
 
 (function() {
@@ -29,8 +29,15 @@
     downvotes.item(i).innerHTML = ""
     // Another spacer
     function showVotes() {
-      if (upvotes.item(i).innerHTML[0] == '+') {
-        upvotes.item(i).innerHTML = total
+
+      if (`+${upvotesNum}/-${downvotesNum}` == upvotes.item(i).innerHTML) {
+        if (total > 0) {
+          upvotes.item(i).innerHTML = "+" + total
+        } else if (upvotes.item(i).innerHTML < 0) {
+          upvotes.item(i).innerHTML = "-" + total
+        } else {
+          upvotes.item(i).innerHTML = total
+        }
       } else {
         upvotes.item(i).innerHTML = "+" + upvotesNum + "/-" + downvotesNum
       }
